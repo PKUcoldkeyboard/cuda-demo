@@ -81,8 +81,10 @@ int main(int argc, char* argv[]) {
     log_info(">>> Arrays Match!");
 
     float elapsedTime;
-    cudaEventElapsedTime(&elapsedTime, start, stop);
-    log_info(">>> Elapsed time: %.3fs", elapsedTime);
+    check_device(cudaEventElapsedTime(&elapsedTime, start, stop));
+    check_device(cudaEventDestroy(start));
+    check_device(cudaEventDestroy(stop));
+    log_info(">>> Elapsed time: %.3f ms", elapsedTime);
 
     cudaFree(d_A);
     cudaFree(d_B);
