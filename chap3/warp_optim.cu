@@ -15,6 +15,7 @@ __global__ void warmingup(float* c) {
     c[index] = a + b;
 }
 
+// branch effiency: 80%
 __global__ void mathKernel1(float *c) {
     int index = blockIdx.x * blockDim.x + threadIdx.x;
     float a, b;
@@ -29,6 +30,8 @@ __global__ void mathKernel1(float *c) {
     c[index] = a + b;
 }
 
+
+// branch efficiency: 100%
 __global__ void mathKernel2(float* c) {
     int index = blockIdx.x * blockDim.x + threadIdx.x;
     float a, b;
