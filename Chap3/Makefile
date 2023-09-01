@@ -1,5 +1,5 @@
 NVCC = nvcc
-NVCC_FLAGS = -O3 -arch=sm_86 -lcudadevrt --relocatable-device-code true
+NVCC_FLAGS = -O3 -lcudadevrt --relocatable-device-code true
 
 CU_APPS = simpleDivergence simpleDeviceQuery nestedHelloWorld reduceInteger \
 		  nestedReduce

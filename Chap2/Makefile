@@ -1,5 +1,5 @@
 NVCC = nvcc
-NVCC_FLAGS = -O3 -arch=sm_86
+NVCC_FLAGS = -O3
 CC = gcc
 CC_FLAGS = -O3
 
